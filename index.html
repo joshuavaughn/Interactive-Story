@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Rescue Mission</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/sources/photo/logo.svg">
+</head>
+<body>
+    <section class="storybook">
+        <div class="background-image">
+            <img src="/sources/photo/stars.png">
+        </div>
+
+        <!-- first -->
+        <div class="page fade-in" id="page-1">
+            <h1>The Space Rescue Mission</h1>
+            <p>Goal: Rescue the princess and escape</p>
+            <div class="options">
+                <img src="/sources/photo/one.jpg" alt="..." class="...">
+                <button class="next-button" onclick="makeChoice('two')">Next</button>
+            </div>
+        </div>
+
+        <div class="page hidden" id="page-2">
+            <h1>Approaching the Planet</h1>
+            <p>A turbulence had occurred! what should we do?</p>
+            <div class="options">
+                <img src="/sources/photo/two.jpg" alt="..." class="...">
+                <button class="next-button" onclick="makeChoice('three')">Repair Engine</button>
+                <button class="next-button" onclick="makeChoice('four')">Ignore Issue</button>
+            </div>
+        </div>
+
+        <!-- second branch -->
+        <div class="page hidden" id="page-3">
+            <h1>Successful Repairs!</h1>
+            <p>We landed successfully to the enemy territory...</p>
+            <div class="options">
+                <img src="/sources/photo/three.jpg" alt="..." class="...">
+                <button class="next-button" onclick="makeChoice('five')">Explore</button>
+                <button class="next-button" onclick="makeChoice('six')">Rescue</button>
+            </div>
+        </div>
+
+        <div class="page hidden" id="page-4">
+            <h1>Emergency Landing!</h1>
+            <p>We had to immediately land on the enemy territory...</p>
+            <div class="options">
+                <img src="/sources/photo/four.jpg" alt="..." class="...">
+                <button class="next-button" onclick="makeChoice('seven')">Fall Back</button>
+                <button class="next-button" onclick="makeChoice('eight')">Explore</button>
+            </div>
+        </div>
+
+        <!-- third branch -->
+        <div class="page hidden" id="page-5">
+            <h1>Found the Enemy Base!</h1>
+            <p>This is our chance to rescue the princess! What should we do?</p>
+            <div class="options">
+                <img src="/sources/photo/five.jpg" alt="..." class="...">
+                <button class="next-button" onclick="makeChoice('six')">Rescue</button>
+                <button class="next-button" onclick="makeChoice('nine')">Sneak</button>
+            </div>
+        </div>
+
+        <div class="page hidden" id="page-6">
+            <h1>Successful Rescue Mission!</h1>
+            <p>but how would we escape?</p>
+            <div class="options">
+                <img src="/sources/photo/six.jpg" alt="..." class="...">
+                <button class="next-button" onclick="makeChoice('one')">Restart</button>
+            </div>
+        </div>
+
+        <div class="page hidden" id="page-7">
+            <h1>Mission Failed</h1>
+            <p>You have decided to retreat and abandon the mission.</p>
+            <div class="options">
+                <img src="/sources/photo/seven.jpg" alt="..." class="...">
+                <button class="next-button" onclick="makeChoice('one')">Restart</button>
+            </div>
+        </div>
+        
+        <div class="page hidden" id="page-8">
+            <h1>Found the Enemy Base!</h1>
+            <p>We are low on equipment, what should we do?</p>
+            <div class="options">
+                <img src="/sources/photo/five.jpg" alt="..." class="...">
+                <button class="next-button" onclick="makeChoice('six')">Rescue</button>
+                <button class="next-button" onclick="makeChoice('nine')">Retreat</button>
+            </div>
+        </div>
+
+        <!-- fourth branch -->
+        <!-- SUCESS NEED TO ESCAPE -->
+
+        <div class="page hidden" id="page-9">
+            <h1>You were captured!</h1>
+            <p>Mission failed, you have to try again.</p>
+            <div class="options">
+                <img src="/sources/photo/nine.jpg" alt="..." class="...">
+                <button class="next-button" onclick="makeChoice('one')">Restart</button>
+            </div>
+        </div>
+
+        <div class="music-controls">
+            <button id="play-music-button" onclick="toggleMusic()">Play Music</button>
+            <button id="pause-music-button" onclick="toggleMusic()" style="display: none;">Pause Music</button>
+        </div>
+
+    </section>
+
+    <audio id="background-music" loop>
+        <source src="/sources/audio/AMONG US - OST - MAIN THEME SONG [HQ].mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e; /* Dark background for contrast */
+    color: #f0f0f0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.background-image {
+    opacity: 40%;
+}
+
+/* Storybook Container */
+.storybook {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+}
+
+.page {
+    text-align: center;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    transition: opacity 1s ease, transform 1s ease, box-shadow 0.5s ease;
+    opacity: 1;
+    transform: scale(1);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for elevated effect */
+    background-color: rgba(255, 255, 255, 0.447);
+}
+
+.page h1, p {
+    color: black;
+}
+
+.options img {
+    margin-right: 10px; /* Spacing between image and buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    border-radius: 8px; /* Optional: Rounded corners for the image */
+}
+
+.options {
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+/* Buttons */
+.next-button, .music-controls button {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for buttons */
+}
+
+/* Button Hover Effects */
+.next-button:hover, .restart-button:hover, .choice-button:hover, .music-controls button:hover {
+    background-color: #ffffff;
+    transform: scale(1.1); /* Slight scaling on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+/* Music Controls */
+.music-controls {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: shimmer 2s infinite linear; /* Shimmer effect for music controls */
+}
+
+.music-controls button {
+    background-color: #4CAF50; /* Music control button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.music-controls button:hover {
+    background-color: #45a049;
+}
+
+.progress-bar #progress-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #ff6f61, #ffac41); /* Gradient fill */
+    transition: width 0.5s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for fill */
+}
